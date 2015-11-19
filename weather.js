@@ -4,10 +4,10 @@ $(function() {
     console.log(JSON.stringify(data));
     
     
-    var markup = "Current weather is: "+ data.currently.temperature + " degrees and " + data.currently.summary;
-    var markup2 = "The weather tomorrow is: "+ data.daily.data[1].temperatureMax + " degrees and " + data.daily.data[1].summary;
-    var markup3 = "The weather the day after tomorrow: "+ data.daily.data[2].temperatureMax + " degrees and " + data.daily.data[2].summary;
-    var markup4 = "The weather the following day is: "+ data.daily.data[3].temperatureMax + " degrees and " + data.daily.data[3].summary;
+    var markup = "Current weather is: "+ data.currently.temperature + " degrees and " + data.currently.summary.toLowerCase() + ".";
+    var markup2 = "The weather tomorrow is: "+ data.daily.data[1].temperatureMax + " degrees and " + data.daily.data[1].summary.toLowerCase();
+    var markup3 = "The weather the day after tomorrow: "+ data.daily.data[2].temperatureMax + " degrees and " + data.daily.data[2].summary.toLowerCase();
+    var markup4 = "The weather the following day is: "+ data.daily.data[3].temperatureMax + " degrees and " + data.daily.data[3].summary.toLowerCase();
       
 
     $('.weather-report').html(markup);
