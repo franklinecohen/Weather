@@ -3,11 +3,17 @@ $(function() {
     console.log(data);
     console.log(JSON.stringify(data));
     
-    // Put your code here. Don't change any other code in this file. You will be sad.
-    var markup = "The weather report... " + "will be here when I finish my homework.";
-    // End of your code
+    
+    var markup = "Current weather is: "+ data.currently.temperature + " degrees and " + data.currently.summary;
+    var markup2 = "The weather tomorrow is: "+ data.daily.data[1].temperatureMax + " degrees and " + data.daily.data[1].summary;
+    var markup3 = "The weather the day after tomorrow: "+ data.daily.data[2].temperatureMax + " degrees and " + data.daily.data[2].summary;
+    var markup4 = "The weather the following day is: "+ data.daily.data[3].temperatureMax + " degrees and " + data.daily.data[3].summary;
+      
 
     $('.weather-report').html(markup);
+    $('.weather-report2').html(markup2);
+    $('.weather-report3').html(markup3);
+    $('.weather-report4').html(markup4);
   }
   $('a.get-the-weather').on('click', function(event) {
     event.preventDefault();
